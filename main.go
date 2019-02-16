@@ -36,7 +36,7 @@ func main() {
 		vals := r.URL.Query()
 		temp, ok := vals["room"]
 		if !ok {
-			fmt.Fprintf(w, "You need to supply the room")
+			fmt.Fprintf(w, "`room` query param is not found")
 			return
 		}
 		roomID := temp[0]
